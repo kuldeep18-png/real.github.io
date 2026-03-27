@@ -1,13 +1,3 @@
-
-real-estate-lead-system/
-├── index.html
-├── dashboard.html
-├── styles.css
-├── script.js
-├── leads.js
-├── .gitignore
-└── README.md
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
