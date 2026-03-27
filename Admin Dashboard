@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Lead Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>🏠 RealEstate Leads</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="dashboard.html" class="active">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="dashboard-header">
+            <h2>Lead Management Dashboard</h2>
+            <div class="dashboard-actions">
+                <button id="exportData" class="btn btn-outline">📊 Export Data</button>
+                <button id="clearAllData" class="btn btn-danger">🗑️ Clear All Data</button>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="buyers">Buyers</button>
+            <button class="tab-btn" data-tab="sellers">Sellers</button>
+        </div>
+
+        <div class="tab-content">
+            <div id="buyersTab" class="tab-pane active">
+                <div class="search-bar">
+                    <input type="text" id="searchBuyers" placeholder="Search buyers by name or email...">
+                </div>
+                <div class="table-container">
+                    <table id="buyersTable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Property Type</th>
+                                <th>Budget</th>
+                                <th>Date Registered</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="buyersTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="sellersTab" class="tab-pane">
+                <div class="search-bar">
+                    <input type="text" id="searchSellers" placeholder="Search sellers by name, email, or address...">
+                </div>
+                <div class="table-container">
+                    <table id="sellersTable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Property Address</th>
+                                <th>Asking Price</th>
+                                <th>Bed/Bath</th>
+                                <th>Sq Ft</th>
+                                <th>Date Registered</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="sellersTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="detailsModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="leads.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
